@@ -8,8 +8,10 @@ import jakarta.annotation.PostConstruct;
 public class HospitalConfig {
     @Value("${hospital.name}")
     private String hospitalName;
+    @Value("${hospital.hotline}")
     @PostConstruct
     public void init() {
         System.out.println("Chào mừng đến với " + hospitalName);
+        System.out.println("Hotline: " + hospitalHotline);
     }
 }
